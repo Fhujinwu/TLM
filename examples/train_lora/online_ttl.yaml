@@ -1,0 +1,62 @@
+
+### model
+model_name_or_path: /hujinwu/LLM_Assemble/pretrain_model/Meta-Llama-3-8B-Instruct
+# model_name_or_path: /hujinwu/LLM_Assemble/pretrain_model/Qwen2.5-7B-Instruct
+# model_name_or_path: /hujinwu/LLM_Assemble/pretrain_model/Llama-2-13b-chat-hf
+# model_name_or_path: /hujinwu/LLM_Assemble/pretrain_model/Llama-3.2-3B-Instruct
+
+### method
+stage: ttl
+do_train: true
+do_predict: true
+finetuning_type: lora
+lora_target: q_proj,v_proj
+trust_remote_code: true
+
+### ttl parameters
+setting: online_ttl
+threshold: 3
+lamb: 0.1
+streaming_batch_size: 8
+
+### dataset
+dataset: geosignal_5k 
+eval_dataset: geosignal_5k
+
+# template: llama2
+# template: qwen
+template: llama3
+cutoff_len: 4096
+max_samples: 41000
+overwrite_cache: true
+preprocessing_num_workers: 16
+
+### output
+output_dir: saves/llama3-8b/online_ttl/geosignal_5k/threshold_3-lr_5e-5-seed_42-v2
+
+logging_steps: 10
+save_steps: 8000
+plot_loss: true
+overwrite_output_dir: true
+
+### train
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 1 
+learning_rate: 5.0e-5
+num_train_epochs: 1.0
+lr_scheduler_type: constant
+warmup_ratio: 0.0
+bf16: true
+ddp_timeout: 180000000
+
+### eval
+do_eval: null
+
+### predict
+temperature: 0.0
+do_sample: false
+max_new_tokens: 512
+per_device_eval_batch_size: 1
+predict_with_generate: true
+
+report_to: none

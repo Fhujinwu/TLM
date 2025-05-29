@@ -1,0 +1,35 @@
+### model
+# model_name_or_path: /hujinwu/LLM_Assemble/pretrain_model/Meta-Llama-3-8B-Instruct
+# model_name_or_path: /hujinwu/LLM_Assemble/pretrain_model/Qwen2.5-7B-Instruct
+# model_name_or_path: /hujinwu/LLM_Assemble/pretrain_model/Llama-3.2-3B-Instruct
+model_name_or_path: /hujinwu/LLM_Assemble/pretrain_model/Llama-2-13b-chat-hf
+
+adapter_name_or_path: /hujinwu/wyf/projects/zhangzitian/projects/LLaMA-Factory/saves/llama2-13b-chat-hf/lora/select_sample_0108/logiqa_ori_prompt/threshold_2-lamb_0.1-lr_1e-6
+
+stage: sft
+do_predict: true
+finetuning_type: lora
+
+### dataset
+eval_dataset: logiqa_5k # gsm8k_test_formatted # alpaca_gpt4_en, geosignal, gen_med_gpt, wealth, agriculture, fingpt, logiqa
+# template: llama3
+# template: deepseek
+template: llama2
+cutoff_len: 4096
+max_samples: 41000
+overwrite_cache: true
+preprocessing_num_workers: 16
+
+### output
+output_dir: saves/ICML25_CKPT_DoubleCheck_Results/Llama-2-13b-chat-hf/ReasoningBench/Logiqa-threshold_2
+
+overwrite_output_dir: true
+
+### eval
+per_device_eval_batch_size: 1
+predict_with_generate: true
+ddp_timeout: 180000000
+
+temperature: 0.0
+do_sample: false
+max_new_tokens: 512
