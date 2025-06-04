@@ -19,7 +19,7 @@
 git clone https://github.com/Fhujinwu/TLM.git
 cd TLM
 ## install TLM environment
-conda create --name tlm --yes python=3.11
+conda create --name tlm --yes python=3.8
 conda activate tlm
 pip install -e ".[torch,metrics]" --no-build-isolation
 ```
