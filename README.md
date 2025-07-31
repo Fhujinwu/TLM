@@ -10,7 +10,7 @@
 </p>
 
 ## 🔥News
-- *2025-07-31*： Update AdaptEval benchmark.
+- *2025-07-31*: Update AdaptEval benchmark and models.
 - *2025-05-27*: We have released our paper on Arxiv.
 - *2025-05-01*: TLM is accepted by ICML2025.
 
@@ -27,6 +27,7 @@ pip install -e ".[torch,metrics]" --no-build-isolation
 ## 🗂 Data Selection
 
 Download：https://huggingface.co/datasets/Jinwu01/AdaptEval
+Download: https://huggingface.co/Jinwu01/TLM
 
 ## 🔨 Training
 TODO
