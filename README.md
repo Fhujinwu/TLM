@@ -4,12 +4,13 @@
     <a href="https://arxiv.org/pdf/2505.20633">
         <img alt="Static Badge" src="https://img.shields.io/badge/Paper-Arxiv-red">
     </a>
-    <a href="https://huggingface.co/">
+    <a href="https://huggingface.co/datasets/Jinwu01/AdaptEval/">
         <img alt="Static Badge" src="https://img.shields.io/badge/HFDataset-TLM-yellow">
     </a>
 </p>
 
 ## 🔥News
+- *2025-07-31*： Update AdaptEval benchmark.
 - *2025-05-27*: We have released our paper on Arxiv.
 - *2025-05-01*: TLM is accepted by ICML2025.
 
@@ -24,7 +25,8 @@ conda activate tlm
 pip install -e ".[torch,metrics]" --no-build-isolation
 ```
 ## 🗂 Data Selection
-TODO
+
+Download：https://huggingface.co/datasets/Jinwu01/AdaptEval
 
 ## 🔨 Training
 TODO
