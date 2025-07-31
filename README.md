@@ -38,12 +38,10 @@ Thanks for the open-source code of [LLaMA-Factory](https://github.com/hiyouga/LL
 If you find our work interesting and meaningful, welcome to give a 🌟 to our repo and cite our paper.
 
 ```text
-@inproceedings{hu2025tlm,
-      title={Test-Time Learning for Large Language Models}, 
-      author={Jinwu Hu and Zhitian Zhang and Guohao Chen and Xutao Wen and Chao Shuai and Wei Luo and Bin Xiao and Yuanqing Li and Mingkui Tan},
-      booktitle={International conference on machine learning},
-      year={2025},
-      organization={PMLR}
+@inproceedings{hutest,
+  title={Test-Time Learning for Large Language Models},
+  author={Hu, Jinwu and Zhang, Zitian and Chen, Guohao and Wen, Xutao and Shuai, Chao and Luo, Wei and Xiao, Bin and Li, Yuanqing and Tan, Mingkui},
+  booktitle={Forty-second International Conference on Machine Learning}
 }
 ```
 
