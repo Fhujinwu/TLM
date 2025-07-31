@@ -26,8 +26,8 @@ pip install -e ".[torch,metrics]" --no-build-isolation
 ```
 ## 🗂 Benchmarks and models
 
-Benchmarks：https://huggingface.co/datasets/Jinwu01/AdaptEval
-Models: https://huggingface.co/Jinwu01/TLM
+- Benchmarks：https://huggingface.co/datasets/Jinwu01/AdaptEval
+- Models: https://huggingface.co/Jinwu01/TLM
 
 ## 🔨 Training
 TODO
