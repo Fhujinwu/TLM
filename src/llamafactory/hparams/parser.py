@@ -165,8 +165,8 @@ def get_train_args(args: Optional[Dict[str, Any]] = None) -> _TRAIN_CLS:
         _set_transformers_logging()
 
     # Check arguments
-    if finetuning_args.stage != "pt" and data_args.template is None:
-        raise ValueError("Please specify which `template` to use.")
+    # if finetuning_args.stage != "pt" and data_args.template is None:
+    #     raise ValueError("Please specify which `template` to use.")
 
     if finetuning_args.stage != "sft" and finetuning_args.stage != "ttl":
         if training_args.predict_with_generate:
