@@ -1,11 +1,14 @@
 <h1 align="center">
      <br>Test-Time Learning for Large Language Models
 <p align="center">
-    <a href="https://arxiv.org/pdf/2505.20633">
-        <img alt="Static Badge" src="https://img.shields.io/badge/Paper-Arxiv-red">
+    <a href="https://openreview.net/pdf?id=iCYbIaGKSR">
+        <img alt="Static Badge" src="https://img.shields.io/badge/Paper-ICML-red">
     </a>
     <a href="https://huggingface.co/datasets/Jinwu01/AdaptEval/">
         <img alt="Static Badge" src="https://img.shields.io/badge/HFDataset-TLM-yellow">
+    </a>
+    <a href="https://huggingface.co/Jinwu01/TLM">
+        <img alt="Static Badge" src="https://img.shields.io/badge/HFModel-TLM-blue">
     </a>
 </p>
 
