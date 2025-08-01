@@ -1,9 +1,6 @@
 
 ### model
-model_name_or_path: /hujinwu/LLM_Assemble/pretrain_model/Meta-Llama-3-8B-Instruct
-# model_name_or_path: /hujinwu/LLM_Assemble/pretrain_model/Qwen2.5-7B-Instruct
-# model_name_or_path: /hujinwu/LLM_Assemble/pretrain_model/Llama-2-13b-chat-hf
-# model_name_or_path: /hujinwu/LLM_Assemble/pretrain_model/Llama-3.2-3B-Instruct
+model_name_or_path: meta-llama/Meta-Llama-3-8B-Instruct
 
 ### method
 stage: ttl
@@ -32,7 +29,7 @@ overwrite_cache: true
 preprocessing_num_workers: 16
 
 ### output
-output_dir: saves/llama3-8b/online_ttl/geosignal_5k/threshold_3-lr_5e-5-seed_42-v2
+output_dir: saves/llama3-8b/online_ttl/geosignal_5k/lamb_0.1-threshold_3-lr_5e-5-seed_42
 
 logging_steps: 10
 save_steps: 8000

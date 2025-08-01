@@ -94,8 +94,6 @@ if __name__ == '__main__':
     
     datas_paths = [
         # 'path to your generated_predictions.jsonl',
-        # '/hujinwu/wyf/projects/zhangzitian/projects/TLM/saves/llama3-8b/offline_ttl/geosignal_5k/threshold_3-lr_5e-5-seed_42/generated_predictions.jsonl'
-        '/hujinwu/wyf/projects/zhangzitian/projects/TLM/saves/llama3-8b/offline_ttl/geosignal_5k/threshold_3-lr_5e-5-seed_42-v2/generated_predictions.jsonl'
     ]
 
     results = []
