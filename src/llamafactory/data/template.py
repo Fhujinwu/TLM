@@ -473,10 +473,15 @@ def parse_template(tokenizer: "PreTrainedTokenizer") -> "Template":
     messages = [{"role": "user", "content": "{{content}}"}]
     user_slot = tokenizer.apply_chat_template(messages, add_generation_prompt=True, tokenize=False)
     user_slot = user_slot[len(prefix) :]
+    user_slot_len = len(user_slot)
+    if user_slot.rstrip('\n').endswith("<think>"):
+        temp_user_slot = user_slot.rstrip("\n").replace("<think>","")
+        user_slot_len=len(temp_user_slot)
 
     messages = [{"role": "user", "content": "{{content}}"}, {"role": "assistant", "content": "{{content}}"}]
     assistant_slot = tokenizer.apply_chat_template(messages, add_generation_prompt=False, tokenize=False)
-    assistant_slot = assistant_slot[len(prefix) + len(user_slot) :]
+    #assistant_slot = assistant_slot[len(prefix) + len(user_slot) :]
+    assistant_slot = assistant_slot[len(prefix) + user_slot_len :]
 
     if len(user_slot) > len(user_slot_empty_system):
         default_system = find_diff(user_slot_empty_system, user_slot)
