@@ -20,7 +20,7 @@
 git clone https://github.com/Fhujinwu/TLM.git
 cd TLM
 ## install TLM environment
-conda create --name tlm --yes python=3.8
+conda create --name tlm --yes python=3.10
 conda activate tlm
 pip install -e ".[torch,metrics]" --no-build-isolation
 ```
@@ -30,10 +30,31 @@ pip install -e ".[torch,metrics]" --no-build-isolation
 - Models: https://huggingface.co/Jinwu01/TLM
 
 ## 🔨 Training
-TODO
+
+All datasets and their contents from AdaptEval are defined in the `dataset_info.json` file included in this repository. You only need to specify the desired dataset in your configuration file to use it.
+
+For example, to adapt to the geography dataset:
+- For offline test-time learning, you can start training with the following command:
+```bash
+llamafactory-cli train examples/train_lora/offline_ttl.yaml
+```
+- For online test-time learning, use:
+```bash
+llamafactory-cli train examples/train_lora/online_ttl.yaml
+```
+The `offline_ttl.yaml` and `online_ttl.yaml` files provide example configurations for fine-tuning with test-time learning. These configurations specify parameters about model, fine-tuning method, dataset, TTL method and so on. Please customize these files according to your own requirements.
 
 ## ⚖️ Evaluation
-TODO
+
+After running the above training commands, you will obtain the model inference results in the specified `output_dir`. You can then evaluate these results.
+
+First, install the required dependencies:
+```bash
+pip install rouge_score rouge-chinese bert_score git+https://github.com/google-research/bleurt.git
+```
+All evaluation-related scripts are located in the `scripts/eval` folder:
+- For datasets in DomainBench and InstructionBench, copy the path to your model inference results into `eval_simility.py` and run the script.
+- For datasets in ReasoningBench, copy the path to your model inference results into `eval_accuracy.py` and run the script.
 
 ## 💬 Citation
 Thanks for the open-source code of [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory)
