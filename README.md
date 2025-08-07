@@ -5,7 +5,7 @@
         <img alt="Static Badge" src="https://img.shields.io/badge/Paper-ICML-red">
     </a>
     <a href="https://huggingface.co/datasets/Jinwu01/AdaptEval/">
-        <img alt="Static Badge" src="https://img.shields.io/badge/HFDataset-TLM-yellow">
+        <img alt="Static Badge" src="https://img.shields.io/badge/HFDataset-AdaptEval-yellow">
     </a>
     <a href="https://huggingface.co/Jinwu01/TLM">
         <img alt="Static Badge" src="https://img.shields.io/badge/HFModel-TLM-blue">
