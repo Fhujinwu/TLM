@@ -45,11 +45,11 @@ All datasets and their contents from AdaptEval are defined in the `dataset_info.
 For example, to adapt to the geography dataset:
 - For offline test-time learning, you can start training with the following command:
 ```bash
-llamafactory-cli train examples/train_lora/offline_ttl.yaml
+CUDA_VISIBLE_DEVICES=0 llamafactory-cli train examples/train_lora/offline_ttl.yaml
 ```
 - For online test-time learning, use:
 ```bash
-llamafactory-cli train examples/train_lora/online_ttl.yaml
+CUDA_VISIBLE_DEVICES=0 llamafactory-cli train examples/train_lora/online_ttl.yaml
 ```
 The `offline_ttl.yaml` and `online_ttl.yaml` files provide example configurations for fine-tuning with test-time learning. These configurations specify parameters about model, fine-tuning method, dataset, TTL method and so on. Please customize these files according to your own requirements.
 
