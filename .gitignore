@@ -171,4 +171,4 @@ config/
 saves/
 output/
 wandb/
-model/
+models/
